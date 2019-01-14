@@ -1,19 +1,17 @@
 <?php
+$target = 8;
+$nums = [4,4];
 
 $ts = new TwoSum();
-var_dump($ts->twoSum2());
+var_dump($ts->twoSum3($target, $nums));
 
-class TwoSum
-{
-    private $target = 19;
-    private $nums = [3,4,5,6,7,8,9,10];
-
-    public function twoSum1(){
+class TwoSum{
+    public function twoSum1($target, $nums){
         $return = array();
-        foreach($this->nums as $k1 => $v1){
-            foreach($this->nums as $k2 =>$v2){
-                if($v1 + $v2 == $this->target){
-                    if($v1 != $v2){
+        foreach($nums as $k1 => $v1){
+            foreach($nums as $k2 =>$v2){
+                if($v1 + $v2 == $target){
+                    if($k1 != $k2){
                         $return = [$k1, $k2];
                         break 2;
                     }
@@ -23,24 +21,14 @@ class TwoSum
         return $return;
     }
 
-    public function twoSum2(){
+    public function twoSum2($target, $nums){
         $return = array();
-        foreach($this->nums as $k => $v){
-            $t = array_search($this->target - $v, $this->nums);
-            if($t && ($this->nums[$t] != $v)){
+        foreach($nums as $k => $v){
+            $newNums = $nums;
+            unset($newNums[$k]);
+            $t = array_search($target - $v, $newNums);
+            if($t && ($t != $k)){
                 $return = array($k, $t);
-                break;
-            }
-        }
-        return $return;
-    }
-
-    public function twoSum3(){
-        $nums = array_flip($this->nums);
-        foreach($this->nums as $k => $v){
-            $t = $nums[$this->target - $v];
-            if(!is_null($nums[$t]) && $nums[$t] != $v){
-                $return = [$k, $t];
                 break;
             }
         }
