@@ -1,7 +1,7 @@
 <?php
 
 $ts = new TwoSum();
-var_dump($ts->twoSum3());
+var_dump($ts->twoSum2());
 
 class TwoSum
 {
@@ -27,7 +27,7 @@ class TwoSum
         $return = array();
         foreach($this->nums as $k => $v){
             $t = array_search($this->target - $v, $this->nums);
-            if(!$t && ($t != $v)){
+            if($t && ($this->nums[$t] != $v)){
                 $return = array($k, $t);
                 break;
             }
