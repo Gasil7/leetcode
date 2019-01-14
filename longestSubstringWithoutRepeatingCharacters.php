@@ -24,7 +24,6 @@ class longestStr {
                 $newStr = substr($newStr, $index+1).$indexStr;
             }
         }
-
         return ['length'=>$length,'str'=>$longer];
     }
 }
