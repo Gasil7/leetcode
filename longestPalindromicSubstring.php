@@ -40,4 +40,26 @@ class Solution {
         return $maxStr;
 
     }
+
+    function manacher($str){
+        //转换后str最大回文的中心坐标
+        $maxIndex = 0;
+        //转换后str最大回文的包括中心点的半边长度
+        $maxLength = 0;
+        //通过在每个字符的两边都插入一个特殊的符号，将所有的回文子串都转换成奇数长度，首尾防止越界
+        $newStr = "^#" . implode("#", str_split($str)) . "#%";
+
+        for ($i = 2; $i < strlen($newStr)-1; $i++){
+            $key = 1;
+            while($newStr[$i-$key] == $newStr[$i+$key]){
+                $key++;
+            }
+            if($key > $maxLength){
+                $maxIndex = $i;
+                $maxLength = $key;
+            }
+        }
+        $res = str_replace('#','',substr($newStr, $maxIndex-$maxLength+1, 2*$maxLength-1));
+        return $res;
+    }
 } 
