@@ -1,6 +1,6 @@
 <?php
 
-$nums1 = [1,3];
+$nums1 = [1,2,3];
 $nums2 = [2];
 
 $solution = new solution();
