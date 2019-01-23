@@ -1,5 +1,5 @@
 <?php
-$x = 123131313;
+$x = 1231321313;
 
 $solution = new Solution();
 $res = $solution->isPalindrome($x);
