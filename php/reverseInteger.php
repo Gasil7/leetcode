@@ -1,5 +1,5 @@
 <?php
-$x = 9223372036854775807;
+$x = 92233720368547758071;
 
 $solution = new solution();
 $res = $solution->reverse($x);
