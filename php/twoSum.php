@@ -1,7 +1,6 @@
 <?php
 $target = 8;
 $nums = [4,4];
-
 $ts = new TwoSum();
 var_dump($ts->twoSum3($target, $nums));
 
