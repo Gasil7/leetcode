@@ -1,6 +1,6 @@
 <?php
     
-$s  = 'ac';
+$s  = 'aca';
 $rs = 'abacdgfdcaba';
 $solution = new Solution();
 $res = $solution->longestPalindrome($s);
