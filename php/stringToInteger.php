@@ -1,5 +1,5 @@
 <?php
-$str = '2ad1231dsadassda';
+$str = 'a2ad1231dsadassda';
 $solution = new Solution();
 $res = $solution->myAtoi($str);
 var_dump($res);
