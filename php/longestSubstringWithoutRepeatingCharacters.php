@@ -1,5 +1,5 @@
 <?php
-$str = 'abcabcbbacsdsdads';
+$str = 'abcabcbbacsdsdds';
 
 $longerStr = new longestStr();
 $size = $longerStr->longestStr1($str);
