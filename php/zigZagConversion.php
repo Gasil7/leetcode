@@ -1,6 +1,6 @@
 <?php
 
-$s = 'PAYPALISHIRING';
+$s = 'PAYPALISHIRINGA';
 $numRows = 3;
 
 $solution = new solution();
