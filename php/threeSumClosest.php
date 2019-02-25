@@ -6,9 +6,9 @@ class Solution {
         sort($nums);
         //定义一个初始和
         $initialSum = $nums[0]+$nums[1]+$nums[2];
-        for($i = 0; $i<=sizeof($nums)-2; $i++){
+        for($i = 0; $i<=sizeof($nums, 0)-2; $i++){
             $left  = $i+1;
-            $right = sizeof($nums)-1;
+            $right = sizeof($nums, 0)-1;
             while ($left < $right){
                 $sum = $nums[$i] + $nums[$left] + $nums[$right];
                 $difference = abs($target - $sum);
