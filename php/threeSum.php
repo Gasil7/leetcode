@@ -22,13 +22,16 @@ class Solution {
     //还超。。
     function threeSum2($nums){
         $arr = [];
+        sort($nums);
         for ($i = 0; $i<= sizeof($nums, 0) - 2; $i++){
             $min = $i+1;
             $max = sizeof($nums, 0)-1;
             while($min < $max){
-                if($nums[$i] + $nums[$min] + $nums[$max] >0){
+                $sum = $nums[$i] + $nums[$min] + $nums[$max];
+
+                if($sum >0){
                     $max --;
-                }elseif ($nums[$i] + $nums[$min] + $nums[$max] <0){
+                }elseif ($sum <0){
                     $min ++;
                 }else{
                     $arr[] = [$nums[$i] , $nums[$min], $nums[$max]];
