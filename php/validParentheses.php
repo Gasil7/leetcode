@@ -6,6 +6,9 @@ class Solution {
         if($s == ''){
             return true;
         }
+        if(strlen($s)%2 != 0){
+            return false;
+        }
 
         $arr= str_split($s);
         if(!in_array($arr[0],$left)){
