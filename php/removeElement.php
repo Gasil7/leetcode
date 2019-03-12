@@ -23,6 +23,17 @@
             }
             return sizeof($nums);
         }
+
+        function removeElement3(&$nums, $val) {
+            $x = 0;
+            for ($i=0; $i < sizeof($nums); $i++) {
+                if($nums[$i] != $val){
+                    $nums[$x] = $nums[$i];
+                    $x++;
+                }
+            }
+            return $x;
+        }
     }
 
 $solution = new Solution();
