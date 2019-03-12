@@ -15,6 +15,14 @@
             }
             return sizeof($nums);
         }
+
+        function removeElement2(&$nums, $val) {
+            foreach($nums as $k => $v){
+                if($v == $val)
+                    unset($nums[$k]);
+            }
+            return sizeof($nums);
+        }
     }
 
 $solution = new Solution();
